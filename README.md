@@ -1,5 +1,6 @@
 # React
 
+## Assignment Instuctions
 Please answer the following questions through your research. A recommendation would be to review
 YouTube or other material online for walk-throughs of fundamentals.
 
@@ -22,3 +23,12 @@ with some basic layout work (margin, padding, etc).
     a. Purpose
     b. Description
     c. Example
+## Key Points
+- Introduction to React and its importance in the MERN stack.
+- Setting up a React project (create-react-app).
+- Dependencies
+- Components, props, and state management.
+- Hooks and lifecycle methods.
+- Routing with React Router.
+- State management with Context API or Redux.
+- Best practices for React development.
