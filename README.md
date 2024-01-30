@@ -9,6 +9,7 @@ know to deliver minimum functionality with this component”
   
 That said – minimalistic and clear is ideal: Simple headers, paragraphs, and images will suffice, along
 with some basic layout work (margin, padding, etc).
+
 1. What is your component?
 2. What is its purpose?
 3. Why is it important?
