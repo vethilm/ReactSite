@@ -11,13 +11,17 @@ with some basic layout work (margin, padding, etc).
 1. What is your component?
     - a library for building user interfaces through components
 3. What is its purpose?
-4. Why is it important?
-5. How does it integrate into the MERN Stack?
+    - creating reusable components to give developers more flexibilty and make more robust interfaces
+5. Why is it important?
+    -  
+7. How does it integrate into the MERN Stack?
+React provides the front end framework within the mern stack
     - What are the steps to integrate it?
     - What are its dependencies?
+         - 
     - Are there any considerations for configuration? If so, what are the most common and how
         are the done?
-6. Common Functionality
+9. Common Functionality
     - Purpose
     - Description
     - Example
@@ -41,7 +45,9 @@ with some basic layout work (margin, padding, etc).
     - [[ how to intall and use ]]
     - [[ example ]]
 - Components, props, and state management.
+    - components are independant resuable bits of code that return HTML.
 - Hooks and lifecycle methods.
+     - 
 - Routing with React Router.
 - State management with Context API or Redux.
 - Best practices for React development.
