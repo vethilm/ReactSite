@@ -6,12 +6,11 @@ YouTube or other material online for walk-throughs of fundamentals.
 
 
  --- things in [[brackets]] should be expanded on further ---
-## What is your component?
-    - a library for building user interfaces through components
+## What is your component? 
+a library for building user interfaces through components
 ## What is its purpose?
-    - creating reusable components to give developers more flexibility and make more robust interfaces
+ creating reusable components to give developers more flexibility and make more robust interfaces
 ## Why is it important?
-    -  
 ## How does it integrate into the MERN Stack?
 React provides the front end framework within the mern stack
     - What are the steps to integrate it?
@@ -37,14 +36,14 @@ React provides the front end framework within the mern stack
     - if you want to create an empty app, without all the files create-react-app installs, you can create your folder and populate the files yourself
         - [[ file organization and necessary files ]]
         -  w node + npm installed, run `npm start`
-- Dependencies
+## Dependencies
     - packages that are used in the react project
     - listed in the packages-lock.json file
     - [[how to install and use]]
     - [[ example ]]
-- Components
-    - components are independent reusable bits of code that return HTML.
-    - class components extend React. Components to give it access to React.Components functions while function components are similar, but use less code and can't access React.Components functions 
+## Components
+-  components are independent reusable bits of code that return HTML.
+-  class components extend React. Components to give it access to React.Components functions while function components are similar, but use less code and can't access React.Components functions 
 ```jsx
 //class component
 class Car extends React.Component {
@@ -58,8 +57,8 @@ function Car() {
 }
 
 ```
-- Props
-	- props are the arguments passed in to react components, or properties. The function like JS arguments and HTML attributes
+## Props
+- props are the arguments passed in to react components, or properties. The function like JS arguments and HTML attributes
 ```jsx
 function Car(props) { 
   return <h2>I am a { props.brand }</h2>; 
@@ -68,9 +67,8 @@ function Car(props) {
 const myElement = <Car brand="Ford" />; //calls Car function and sets brand value to Ford
 // will return "I am a Ford"
 ```
-- State Management
-
-- Hooks
+## State Management
+### Hooks
 hooks allow function components to access state and are the reason class components are less necessary 
 in a class component, you would have a constructor that contains your states and set methods to change them 
 ``` jsx
@@ -108,15 +106,14 @@ function FavoriteColor() {
       >Blue</button>
     </>
 ```
-
-- lifestyle methods
-	- a lifecycle is composed of 3 phases: mounting, updating, and unmounting
+##  lifestyle methods
+-  a lifecycle is composed of 3 phases: mounting, updating, and unmounting
 	- mounting: where the component is created and inserted to DOM
 		- constructor() - creation
 		- render() - inserting to DOM, called every time a component gets re rendered
 	- updating: when a components props or state changes
 		- `shouldComponentUpdate()` 
 
-- Routing with React Router.
-- State management with Context API or Redux.
-- Best practices for React development.
+### Routing with React Router.
+### State management with Context API or Redux.
+### Best practices for React development.
