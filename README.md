@@ -1,4 +1,4 @@
-## Assignment Instuctions
+## Assignment Instructions
 Please answer the following questions through your research. A recommendation would be to review
 YouTube or other material online for walk-throughs of fundamentals.
 >  Reiterating: I’m not looking for a comprehensive overview but more of a “here is what you need to know to deliver minimum functionality with this component”
@@ -45,16 +45,14 @@ React provides the front end framework within the mern stack
 - Components
     - components are independent reusable bits of code that return HTML.
     - class components extend React. Components to give it access to React.Components functions while function components are similar, but use less code and can't access React.Components functions 
-```
+```jsx
 //class component
-
 class Car extends React.Component {
   render() {
     return <h2>Hi, I am a Car!</h2>;
   }
 }
-//function component ofd the same code
-
+//function component of the same code
 function Car() {
   return <h2>Hi, I am a Car!</h2>;
 }
@@ -62,18 +60,69 @@ function Car() {
 ```
 - Props
 	- - props are the arguments passed in to react components, or properties. The function like JS arguments and HTML attributes
-```
+```jsx
 function Car(props) { 
   return <h2>I am a { props.brand }</h2>; 
 }
 
-const myElement = <Car brand="Ford" />; //calls Car fucntion and set brand value to Ford
-//will return "I am a Ford"
+const myElement = <Car brand="Ford" />; //calls Car function and sets brand value to Ford
+// will return "I am a Ford"
 ```
 - State Management
 	-
-- Hooks and lifecycle methods.
-     - 
+- Hooks
+hooks allow function components to access state and are the reason class components are less necessary 
+in a class component, you would have a constructor that contains your states and set methods to change them 
+``` jsx
+// a class component
+constructor(props) {
+    super(props);
+    this.state = {
+      brand: "Ford",
+      model: "Mustang",
+      color: "red",
+      year: 1964
+    };
+  }
+  setColor = () => {
+    this.setState({color: "blue"});
+  }
+
+```
+
+this functionality is simplified in function components using hooks. 
+ - color is your state property and setColor acts as your set method
+```jsx
+import React, { useState } from "react";
+import ReactDOM from "react-dom/client";
+
+function FavoriteColor() {
+  const [color, setColor] = useState("red");  // [get,set] 
+
+  return (
+    <>
+      <h1>My favorite color is {color}!</h1>
+      <button
+        type="button"
+        onClick={() => setColor("blue")} 
+      >Blue</button>
+    </>
+```
+
+- lifestyle methods
+	- a lifecycle is composed of 3 phases: mounting, updating, and unmounting
+	- mounting: where the component is created and inserted to DOM
+		- constructor() - creation
+		- render() - inserting to DOM, called every time a component gets re rendered
+	- updating: when a components props or state changes
+		- `shouldComponentUpdate()` 
+
+
+
+
+
+
+
 - Routing with React Router.
 - State management with Context API or Redux.
 - Best practices for React development.
