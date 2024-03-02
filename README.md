@@ -6,20 +6,20 @@ YouTube or other material online for walk-throughs of fundamentals.
 
 
  --- things in [[brackets]] should be expanded on further ---
-1. What is your component?
+## What is your component?
     - a library for building user interfaces through components
-3. What is its purpose?
+## What is its purpose?
     - creating reusable components to give developers more flexibility and make more robust interfaces
-5. Why is it important?
+## Why is it important?
     -  
-7. How does it integrate into the MERN Stack?
+## How does it integrate into the MERN Stack?
 React provides the front end framework within the mern stack
     - What are the steps to integrate it?
     - What are its dependencies?
          - 
     - Are there any considerations for configuration? If so, what are the most common and how
         are the done?
-9. Common Functionality
+## Common Functionality
     - Purpose
     - Description
     - Example
@@ -35,12 +35,12 @@ React provides the front end framework within the mern stack
     - run `npm start` to open your web app on a local server
     - the page is populated with default files that will can edit to create your app
     - if you want to create an empty app, without all the files create-react-app installs, you can create your folder and populate the files yourself
-        - [[ file organization and neccessary files ]]
+        - [[ file organization and necessary files ]]
         -  w node + npm installed, run `npm start`
 - Dependencies
     - packages that are used in the react project
     - listed in the packages-lock.json file
-    - [[ how to intall and use ]]
+    - [[how to install and use]]
     - [[ example ]]
 - Components
     - components are independent reusable bits of code that return HTML.
@@ -59,7 +59,7 @@ function Car() {
 
 ```
 - Props
-	- - props are the arguments passed in to react components, or properties. The function like JS arguments and HTML attributes
+	- props are the arguments passed in to react components, or properties. The function like JS arguments and HTML attributes
 ```jsx
 function Car(props) { 
   return <h2>I am a { props.brand }</h2>; 
@@ -69,7 +69,7 @@ const myElement = <Car brand="Ford" />; //calls Car function and sets brand valu
 // will return "I am a Ford"
 ```
 - State Management
-	-
+
 - Hooks
 hooks allow function components to access state and are the reason class components are less necessary 
 in a class component, you would have a constructor that contains your states and set methods to change them 
@@ -116,12 +116,6 @@ function FavoriteColor() {
 		- render() - inserting to DOM, called every time a component gets re rendered
 	- updating: when a components props or state changes
 		- `shouldComponentUpdate()` 
-
-
-
-
-
-
 
 - Routing with React Router.
 - State management with Context API or Redux.
