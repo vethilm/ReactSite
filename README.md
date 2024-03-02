@@ -18,11 +18,10 @@ React provides the front end framework within the mern stack
          - 
     - Are there any considerations for configuration? If so, what are the most common and how
         are the done?
-## Common Functionality
+## Common Functionality / Key Points
     - Purpose
     - Description
     - Example
-## Key Points
 - Introduction to React and its importance in the MERN stack.
     - 
 - Setting up a React project (create-react-app).
@@ -68,7 +67,7 @@ const myElement = <Car brand="Ford" />; //calls Car function and sets brand valu
 // will return "I am a Ford"
 ```
 ## State Management
-### Hooks
+## Hooks
 hooks allow function components to access state and are the reason class components are less necessary 
 in a class component, you would have a constructor that contains your states and set methods to change them 
 ``` jsx
@@ -114,6 +113,6 @@ function FavoriteColor() {
 	- updating: when a components props or state changes
 		- `shouldComponentUpdate()` 
 
-### Routing with React Router.
-### State management with Context API or Redux.
-### Best practices for React development.
+## Routing with React Router.
+## State management with Context API or Redux.
+## Best practices for React development.
