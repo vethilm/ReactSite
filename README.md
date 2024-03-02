@@ -69,7 +69,6 @@ const myElement = <Car brand="Ford" />; //calls Car function and sets brand valu
 // will return "I am a Ford"
 ```
 - State Management
-	-
 - Hooks
 hooks allow function components to access state and are the reason class components are less necessary 
 in a class component, you would have a constructor that contains your states and set methods to change them 
