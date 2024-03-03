@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hooks and Lifecycle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+    <script src=" https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js "></script>
+<link href=" https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css " rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <p class="siteTitle">
+            <a href = "index.html">React Guide</a>
+        </p>
+        <div class="nav">
+            <div class="dropdownActive">
+                <a href="set-up.html">Hooks and LifeCycle</a>
+            </div>
+            <ul class="dropdown">
+                <a href="repositories.html">1</a>
+                <a href="operations.html">2</a>
+                <a href="branching.html">3</a>
+            </ul>
+        </div>
+    </div> 
+
+    <div class="content">
+        
+        <h1>Hooks and Lifecycle Methods</h1>
+        <hr>
+        <h2>Hooks</h2>
+        <h3>What are hooks?</h3>
+        <p>Hooks allow function components to access properties and are the reason class components are less necessary. In a class
+            component, you would have a constructor that contains your states and set methods to change them. This functionality is simplified in components using hooks.
+        </p>
+        <p> 
+            In this class component example, Car is created with a contructor that defines the state and includes the method <span class="code">setColor</span> 
+            which changes the color state when called.
+        </p>
+        <pre class = "codeBlock">
+            <code class="language-js line-numbers">
+                class Car extends React.Component{
+                    constructor(props) {
+                        super(props);
+                        this.state = {
+                            brand: "Ford",
+                            model: "Mustang",
+                            color: "red",
+                            year: 1964
+                            };
+                        }
+                    setColor = () => {
+                        this.setState({color: "blue"});
+                    }
+                render(){
+                    &lt;&gt;
+                        &lt;h1&gt;My car is {color}!&lt;/h1&gt;
+                        &lt;button
+                            type=&quot;button&quot;
+                            onClick={this.setColor};
+                        &gt;Blue&lt;/button&gt;
+                    &lt;/&gt;
+                }
+            }
+    </code>
+        </pre>
+        <h3>useState</h3>
+        <p>
+            The useState hook is used to track states in a fucntion component. It accecpts an intital state and returns an array of two values, the current state and a a function that updates 
+            the state, like the class component's set state method. Hooks use destructuring assignment to unpack the array into seperate varibles In the example below,
+             we create a use state hook in the function component Car. 
+         </p>
+         <p>
+            The first value <span class="code">color</span> is set to the current state of red. The second value <span class="code">setColor</span> it the function used to change the state. 
+         </p>
+        
+
+        <pre class="codeBlock">
+            import { useState } from "react";
+            function Car() {
+                const [color, setColor] = useState(&quot;red&quot;);
+        </pre>
+        <p>
+
+        </p>
+        <pre class="codeBlock">
+            return (
+                &lt;&gt;
+                    &lt;h1&gt;My car is {color}!&lt;/h1&gt;
+                    &lt;button
+                        type=&quot;button&quot;
+                        onClick={() =&gt; setColor(&quot;blue&quot;)}
+                    &gt;Blue&lt;/button&gt;
+                &lt;/&gt;
+            )}
+        </pre>
+        
+        <h3>useEffect</h3>
+        <h3>useContext</h3>
+         <a href="index.html" class="prev">< Home </a>
+         <a href="repositories.html" class="next"> Next ></a>
+         <hr>
+    </div>
+</body>
+<script src="js/script.js"></script>
+</html>
