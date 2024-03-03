@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
 
     <script src=" https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js "></script>
-<link href=" https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css " rel="stylesheet">
+    <link href=" https://cdn.jsdelivr.net/npm/prismjs-okaidia-theme@0.0.1/prism-okaidia.min.css " rel="stylesheet">
 </head>
 <body>
     <div class="header">
@@ -44,7 +44,7 @@
             which changes the color state when called.
         </p>
         <pre class = "codeBlock">
-            <code class="language-js line-numbers">
+            <code class="language-js">
                 class Car extends React.Component{
                     constructor(props) {
                         super(props);
@@ -82,23 +82,27 @@
         
 
         <pre class="codeBlock">
-            import { useState } from "react";
-            function Car() {
-                const [color, setColor] = useState(&quot;red&quot;);
-        </pre>
+            <code class="language-js">
+import { useState } from "react";
+    function Car() {
+    const [color, setColor] = useState(&quot;red&quot;);             
+            </code>
+       </pre>
         <p>
 
         </p>
         <pre class="codeBlock">
-            return (
-                &lt;&gt;
-                    &lt;h1&gt;My car is {color}!&lt;/h1&gt;
-                    &lt;button
-                        type=&quot;button&quot;
-                        onClick={() =&gt; setColor(&quot;blue&quot;)}
-                    &gt;Blue&lt;/button&gt;
-                &lt;/&gt;
-            )}
+            <code class="language-js">
+return (
+    &lt;&gt;
+        &lt;h1&gt;My car is {color}!&lt;/h1&gt;
+        &lt;button
+            type=&quot;button&quot;
+            onClick={() =&gt; setColor(&quot;blue&quot;)}
+        &gt;Blue&lt;/button&gt;
+    &lt;/&gt;
+)}
+        </code>
         </pre>
         
         <h3>useEffect</h3>
