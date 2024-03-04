@@ -1,116 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hooks and Lifecycle</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
 
     <script src=" https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js "></script>
-    <link href=" https://cdn.jsdelivr.net/npm/prismjs-okaidia-theme@0.0.1/prism-okaidia.min.css " rel="stylesheet">
-</head>
-<body>
+    <link
+      href=" https://cdn.jsdelivr.net/npm/prismjs-okaidia-theme@0.0.1/prism-okaidia.min.css "
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="header">
-        <p class="siteTitle">
-            <a href = "index.html">React Guide</a>
-        </p>
-        <div class="nav">
-            <div class="dropdownActive">
-                <a href="set-up.html">Hooks and LifeCycle</a>
-            </div>
-            <ul class="dropdown">
-                <a href="repositories.html">1</a>
-                <a href="operations.html">2</a>
-                <a href="branching.html">3</a>
-            </ul>
+      <p class="siteTitle">
+        <a href="index.html">React Guide</a>
+      </p>
+      <div class="nav">
+        <div class="dropdownActive">
+          <a href="set-up.html">Hooks and LifeCycle</a>
         </div>
-    </div> 
+        <ul class="dropdown">
+          <a href="repositories.html">1</a>
+          <a href="operations.html">2</a>
+          <a href="branching.html">3</a>
+        </ul>
+      </div>
+    </div>
 
     <div class="content">
-        
-        <h1>Hooks and Lifecycle Methods</h1>
-        <hr>
-        <h2>Hooks</h2>
-        <h3>What are hooks?</h3>
-        <p>Hooks allow function components to access properties and are the reason class components are less necessary. In a class
-            component, you would have a constructor that contains your states and set methods to change them. This functionality is simplified in components using hooks.
-        </p>
-        <p> 
-            In this class component example, Car is created with a contructor that defines the state and includes the method <span class="code">setColor</span> 
-            which changes the color state when called.
-        </p>
-        <pre class = "codeBlock">
+      <h1>Hooks and Lifecycle Methods</h1>
+      <hr />
+      <h2>Hooks</h2>
+      <h3>What are hooks?</h3>
+      <p>
+        Hooks allow function components to access properties and are the reason
+        class components are less necessary. In a class component, you would
+        have a constructor that contains your states and set methods to change
+        them. This functionality is simplified in components using hooks.
+      </p>
+      <p>
+        In this class component example, Car is created with a contructor that
+        defines the state and includes the method
+        <span class="code">setColor</span>
+        which changes the color state when called. This concept is translated to
+        useState in function components.
+      </p>
+      <pre class="codeBlock">
             <code class="language-js">
-                class Car extends React.Component{
-                    constructor(props) {
-                        super(props);
-                        this.state = {
-                            brand: "Ford",
-                            model: "Mustang",
-                            color: "red",
-                            year: 1964
-                            };
-                        }
-                    setColor = () => {
-                        this.setState({color: "blue"});
-                    }
-                render(){
-                    &lt;&gt;
-                        &lt;h1&gt;My car is {color}!&lt;/h1&gt;
-                        &lt;button
-                            type=&quot;button&quot;
-                            onClick={this.setColor};
-                        &gt;Blue&lt;/button&gt;
-                    &lt;/&gt;
+    class Car extends React.Component{
+        constructor(props) {
+            super(props);
+            this.state = {
+                brand: "Ford",
+                model: "Mustang",
+                color: "red",
+                year: 1964
+                };
                 }
-            }
+        setColor = () => {
+            this.setState({color: "blue"});
+        }
+        render(){
+            &lt;&gt;
+                &lt;h1&gt;My car is {color}!&lt;/h1&gt;
+                &lt;button
+                    type=&quot;button&quot;
+                    onClick={this.setColor};
+                &gt;Blue&lt;/button&gt;
+            &lt;/&gt;
+        }
+    }
     </code>
-        </pre>
-        <h3>useState</h3>
-        <p>
-            The useState hook is used to track states in a fucntion component. It accecpts an intital state and returns an array of two values, the current state and a a function that updates 
-            the state, like the class component's set state method. Hooks use destructuring assignment to unpack the array into seperate varibles In the example below,
-             we create a use state hook in the function component Car. 
-         </p>
-         <p>
-            The first value <span class="code">color</span> is set to the current state of red. The second value <span class="code">setColor</span> it the function used to change the state. 
-         </p>
-        
+    </pre>
+      <br />
+      <h3>useState</h3>
+      <p>
+        The State Hook is used to track states in a fucntion component. It
+        accepts an intital state and returns an array of two values, the current
+        state and a a function that updates the state, like the class
+        component's set state method. Hooks use destructuring assignment to
+        unpack the array into seperate varibles In the example below, we create
+        a use state hook in the function component Car.
+      </p>
+      <p>
+        The first value <span class="code">color</span> is set to the current
+        state of red. The second value <span class="code">setColor</span> it the
+        function used to change the state. When
+        <span class="code">setColor</span> is called in the HTML, it will change
+        the state of <span class="code">color</span>.
+      </p>
 
-        <pre class="codeBlock">
+      <pre class="codeBlock">
             <code class="language-js">
-import { useState } from "react";
-    function Car() {
-    const [color, setColor] = useState(&quot;red&quot;);             
+    import { useState } from "react";
+        function Car() {
+            const [color, setColor] = useState(&quot;red&quot;);    
+        }         
             </code>
        </pre>
-        <p>
-
-        </p>
-        <pre class="codeBlock">
+      <p></p>
+      <pre class="codeBlock">
             <code class="language-js">
-return (
-    &lt;&gt;
-        &lt;h1&gt;My car is {color}!&lt;/h1&gt;
-        &lt;button
-            type=&quot;button&quot;
-            onClick={() =&gt; setColor(&quot;blue&quot;)}
-        &gt;Blue&lt;/button&gt;
-    &lt;/&gt;
-)}
+    return (
+        &lt;&gt;
+            &lt;h1&gt;My car is {color}!&lt;/h1&gt;
+            &lt;button
+                type=&quot;button&quot;
+                onClick={() =&gt; setColor(&quot;blue&quot;)}
+            &gt;Blue&lt;/button&gt;
+        &lt;/&gt;
+    )}
         </code>
         </pre>
-        
-        <h3>useEffect</h3>
-        <h3>useContext</h3>
-         <a href="index.html" class="prev">< Home </a>
-         <a href="repositories.html" class="next"> Next ></a>
-         <hr>
+      <br />
+      <h3>useEffect</h3>
+      <p>
+        The Effect Hook lets you add side effects like fetching data, updating
+        the DOM, and timers from inside functional components. It can accept two
+        arguments, function and dependency. The function argument is simply the
+        function that runs each time it's called.
+      </p>
+      <p>
+        The dependency argument is an optional one. If it's left blank, it runs
+        every time the DOM object is rendered, if it's an empty array ([ ]) it
+        runs only on the first render. If the dependency is the props or state
+        values, it will run on the first render and any time any of the
+        dependancies change.
+      </p>
+      <p>
+        In this example, the component Counter has two states, count and
+        multiplier. It uses useState to increment the count every time the
+        button is pressed. UseEffect is used here to change the mulitiplier
+        everytime the count is changed.
+      </p>
+      <pre class="codeBlock">
+            <code class="language-js">
+    import { useState, useEffect } from "react";
+
+    function Counter() {
+    const [count, setCount] = useState(0);
+    const [multiplier, setMulitiplier] = useState(0);
+
+    useEffect(() => {
+        setMulitiplier(() => count * 2);
+    }, [count]); // <- add the count variable here
+    return (
+        &lt;&gt;
+        &lt;p&gt;Count: {count}&lt;/p&gt;
+        &lt;button onClick={() =&gt; setCount((c) =&gt; c + 1)}&gt;+&lt;/button&gt;
+        &lt;p&gt;Mulitiplier: {mulitiplier}&lt;/p&gt;
+        &lt;/&gt;
+        );
+    }             
+            </code>
+       </pre>
+      <br />
+      <h3>useContext</h3>
+      <p>
+        Context is used to pass data through the component tree without having
+        to manually pass down props. A React app that uses nested components may
+        have a prop that is set in the highest level component that needs to be
+        accessed in a lower level. Say you have 5 components where the fifth one
+        requires a prop that is defined in the first, you would have to call:
+      </p>
+      <p>
+        <span class="code"
+          >&lt;span class=&quot;code&quot;&gt;&lt;Component1 color={color}
+          /&gt;&lt;/span&gt;</span
+        >,
+      </p>
+      <p>
+        <span class="code"
+          >&lt;span class=&quot;code&quot;&gt;&lt;Component2 color={color}
+          /&gt;&lt;/span&gt;</span
+        >
+      </p>
+      <p>and so on until you can use it in the fifth.</p>
+      <p>
+        With useContext, you can wrap the components into a Context Provider
+        where you give it the state value. Then, in the component where that
+        value is needed, you add the useContext hook to access the data.
+      </p>
+      <pre class="codeBlock">
+        <code class="language-js">
+    import { useState, useEffect, useContext} from "react";
+
+    function Component1() {
+        const [color, setColor] = useState(&quot;Red&quot;); // create color state with useState
+        return (
+          &lt;ColorContext.Provider value={color}&gt;  // create the context provider
+            &lt;Component2 color={color} /&gt;
+          &lt;/ColorContext.Provider&gt;
+        );
+      }
+
+      function Component5() {
+        const user = useContext(UserContext);  // access the state with useContext
+        return (
+          &lt;&gt;
+            &lt;h1&gt;Component 5&lt;/h1&gt;
+            &lt;h2&gt;{`My car is {color}!}&lt;/h2&gt;  // use the value in the nested component
+          &lt;/&gt;
+        );
+      }
+        </code>
+   </pre>
+      <br />
+      <h2>Life Cycle</h2>
+      <p>
+        A component's life cycle is the various stages it goes through from it's
+        initialization to it's removal from the DOM. Every component goes
+        through the same cycle which includes initilization, mounting, updating,
+        and unmounting.
+      </p>
+      <h3>Initialization</h3>
+      <p>
+        The initialization stage is where the component is created, it uses the
+        method
+        <span class="code">constructor()</span> to initialize state and set
+        event handlers.
+      </p>
+      <h3>Mounting</h3>
+      <p>
+        In mounting, the component is created and inserted to the DOM using the
+        <span class="code">render()</span> method to return the JSX to the
+        webpage.
+      </p>
+      <h3>Updating</h3>
+      <p>
+        The updating stage occurs while a component's state is being updated and
+        the appliaction is rerendered. This is where methods such as
+        <span class="code">setState()</span>,
+        <span class="code">shouldComponentUpdate()</span>,
+        <span class="code">getSnapshotBeforeUpdate()</span>, and
+        <span class="code">componentDidUpdate()</span> are called.
+      </p>
+      <h3>Unmounting</h3>
+      <p>
+        The last stage, unmounting, occurs when the component is removed from
+        the page.
+      </p>
+      <hr />
+      <a href="index.html" class="prev">< Home </a>
+      <a href="repositories.html" class="next"> Next ></a>
+      <hr />
     </div>
-</body>
-<script src="js/script.js"></script>
+  </body>
+  <script src="js/script.js"></script>
 </html>
