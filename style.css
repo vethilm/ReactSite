@@ -192,19 +192,19 @@ a:visited {
     border: 2px solid white;
 }
 .set {
-    background-image: url('img/bk/bk1.jpg');
+    background-image: url('https://media.istockphoto.com/id/1224500457/photo/programming-code-abstract-technology-background-of-software-developer-and-computer-script.jpg?s=612x612&w=0&k=20&c=nHMypkMTU1HUUW85Zt0Ff7MDbq17n0eVeXaoM9Knt4Q=');
 }
 
-.repo {
-    background-image: url('img/bk/rep.png');
+.comps {
+    background-image: url('https://miro.medium.com/v2/resize:fit:1400/1*F_8axWksLKFjCcd3aAwmew.jpeg');
 }
 
-.op {
-    background-image: url('img/bk/op.jpg');
+.hooks {
+    background-image: url('https://www.ventivtech.com/hubfs/Policy_Lifecycle_Hero.jpg');
 }
 
-.branch {
-    background-image: url('img/bk/branch.jpg');
+.state {
+    background-image: url('https://www.pullrequest.com/blog/simplify-react-state-management-using-redux-toolkit/images/simplify-react-state-management-using-redux-toolkit.webp');
 }
 
 @media  only screen and (max-width:850px) {
