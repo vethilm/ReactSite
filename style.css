@@ -162,6 +162,13 @@ a:visited {
     margin-left: 10%;
 }
 
+.image{
+    border-radius: 3px;
+    width: 84%;
+    transform  :translate(10%,0)
+
+}
+
 
 /* index page  */
 .menuSection {

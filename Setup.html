@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Installation</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src=" https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js "></script>
+    <link
+      href=" https://cdn.jsdelivr.net/npm/prismjs-okaidia-theme@0.0.1/prism-okaidia.min.css "
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <p class="siteTitle">
+        <a href="index.html">React Guide</a>
+      </p>
+      <div class="nav">
+        <div class="dropdownActive">
+          <a href="set-up.html">Hooks and LifeCycle</a>
+        </div>
+        <ul class="dropdown">
+          <a href="repositories.html">1</a>
+          <a href="operations.html">2</a>
+          <a href="branching.html">3</a>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content">
+      <h1>Installation Node.js and npm for Windows and Mac</h1>
+      <hr />
+      <!-- Steps -->
+      <h2>Windows Installation</h2>
+      <p>In this section, we will guide you through the process of installing React on a Windows machine.</p>
+      <h3>Step 1: Install Node.js and npm</h3><br><br>
+      <h3>Step 2: Install Create React App</h3><br><br>
+      <h3>Step 3: Create a New React Project</h3><br><br>
+      <h3>Step 4: Go to Project Directory and Start Development Server</h3>
+
+    <!-- Step 1 -->
+      <h2>Step 1: Install Node.js and npm</h2>
+
+      <p>
+        Before installing React, you need to have Node.js and npm (Node Package Manager) 
+        installed on your system. If you haven't already installed them, follow these steps:
+      </p>
+      <p>
+        1. Visit the Node.js download page at: LINK!!! https://nodejs.org/en/download/<br>
+        2. Download the installer for your Windows system (either the LTS or Current version is fine, but the LTS version is recommended for most users)<br>
+        3. To install Node.js and npm, please run the installer and carefully follow the provided prompts.
+        <!-- <span class="code">setColor</span> -->
+        STYLE PHOTO
+      </p>
+      <img src="images/step1windows.png" class="image">
+      <br>
+      <pre class="codeBlock">
+            <code class="language-terminal">
+    node -v npm -v
+        </code>
+        </pre>
+      <p>
+        These commands should display the version numbers for Node.js and npm, respectively.
+      </p>
+      <br />
+
+    <!-- Step 2 -->
+      <h2>Step 2: Install Create React App</h2>
+      <p>
+        Create React App is a command-line tool that simplifies the process of setting up a new 
+        React project with a recommended project structure and configuration. 
+        To install Create React App globally, open a command prompt and run the following command:
+      </p>
+      <pre class="codeBlock">
+            <code class="language-js">
+    npm install -g create-react-app
+            </code>
+       </pre>
+
+      <p>This command installs Create React App on your system, making it available to use in any directory.</p>
+      <br />
+
+    <!-- Step 3 -->
+      <h2>Step 3: Create a New React Project</h2>
+      <p>Now that you have Create React App installed, you can use it to create a new React project. 
+        To do this, open a command prompt, go to the directory where you want the project to live, and run the following command:</p>
+      <pre class="codeBlock">
+            <code class="language-js">
+    create-react-app my-app
+        </code>
+        </pre>
+        <p>Replace “my-app” with the desired name for your project. Create React App will create a new directory with the 
+        specified name and generate a new React project with a recommended project structure and configuration.
+        </p>
+        <pre class="codeBlock">
+            <code class="language-js">
+    npm start       
+        </code>
+        </pre>
+        <br />
+
+    <!-- Step 4 -->
+      <h2>Step 4: Go to Project Directory and Start Development Server</h2>
+      <p>Once the project is created, head over to the project directory by running the following command in the command prompt:</p>
+      <pre class="codeBlock">
+           <code class="language-js">
+    cd my-app
+       </code>
+       </pre>
+       <br />
+
+       <p>Replace “my-app” with the name of your project directory. Now, start the development server by running the following command:</p>
+       <p>This command launches the development server, which watches for changes to your project files and automatically reloads the browser when changes are detected.<br><br>
+        A new browser window should open with your React application running at LINK!!! http://localhost:3000/ that looks like this:
+        </p>
+        <img src="images/react-on-windows.png" class="image">
+        <p>Congratulations! You have successfully installed React on your Windows machine and created a new React project. You can now begin building your user interfaces with React.</p>
+        <br />
+
+
+        <h2>Mac Installation</h2>
+        <p>Now, let's walk through the process of installing React on a computer running macOS:</p>
+
+        <h3>Step 1: Install Node.js and npm</h3><br><br>
+        <h3>Step 2: Install Create React App on macOS</h3><br><br>
+        <h3>Step 3: Create a New React Project</h3><br><br>
+        <h3>Step 4: Go to Project Directory and Start Development Server</h3>
+
+    <!-- Step 1 -->
+        <h2>Step 1: Install Node.js and npm</h2>
+
+        <p>
+        As with the Windows installation process, you need to have Node.js and npm (Node Package Manager) installed on your macOS system as well. 
+        If you haven't already installed them, follow these steps:<br><br>1. Visit the Node.js download page
+        <br>2. Download the macOS installer<br>
+        </p>
+        <img src="images/mac1.png" class="image">
+        <p>
+        1. Once downloaded, click the .pkg file in your Downloads folder to run the installer.<br>
+        2. Follow the instructions that appear on your screen, including accepting the License Agreement, selecting the target destination for the installed files, and selecting the installation type.<br>
+        
+        </p>
+        <img src="images/mac2.png" class="image">
+        <p>
+        After the installation is complete, you can verify that Node.js and npm are installed by opening a terminal and running the following commands:
+        </p>
+        <br />
+        <pre class="codeBlock">
+            <code class="language-js">
+    node -v 
+            </code>
+        </pre>
+        <br>
+        <pre class="codeBlock">
+            <code class="language-js">
+    npm -v
+            </code>
+        </pre>
+        <br>
+        <p>These commands should display the version numbers for Node.js and npm, respectively.<br><br>
+            Alternatively, you can install Node.js and npm via the command line. To do this, open Terminal then input:
+        </p>
+        <br>
+        <pre class="codeBlock">
+            <code class="language-js">
+    brew install node
+            </code>
+        </pre>
+        <br>
+        <p>Wait for the installation to complete then verify its installation in the same way as above, by entering:</p>
+        <br>
+        <pre class="codeBlock">
+            <code class="language-js">
+    node -v
+            </code>
+        </pre>
+        <br>
+        <p>And then:</p>
+        <br>
+        <pre class="codeBlock">
+            <code class="language-js">
+    npm -v
+            </code>
+        </pre>
+        <br>
+
+    <!-- Step 2 -->
+      <h2>Step 2: Install Create React App on macOS</h2>
+      <p>
+        Now, let's get started with installing Create React App on macOS.<br><br>
+        Create React App is a convenient way to set up a single-page application with minimal steps and no configuration.<br><br>
+        Let's proceed with the installation steps.<br><br>
+        First, open the terminal and create a folder named react-app by typing the following command:
+      </p>
+      <pre class="codeBlock">
+            <code class="language-js">
+    mkdir react-app
+            </code>
+       </pre>
+       <br>
+        <p>Next, navigate to the react-app directory with this command:</p>
+        <br />
+      <pre class="codeBlock">
+            <code class="language-js">
+    cd react-app
+            </code>
+        </pre>
+        <br>
+        <p>To verify that you're in the correct directory, type the following command and press Enter:</p><br>
+        <pre class="codeBlock">
+            <code class="language-js">
+    pwd
+            </code>
+        </pre>
+        <br>
+        <p>Once you've confirmed that you're in the right directory, you can create a new React project.</p>
+
+    <!-- Step 3 -->
+      <h2>Step 3: Create a New React Project</h2>
+      <p>Now that you have Create React App installed, you can use it to create a new React project, type the command below:</p>
+      <pre class="codeBlock">
+            <code class="language-js">
+    npx create-react-app my-app
+            </code>
+        </pre>
+        <br>
+        <p>npx is a module included with npm. The installation steps will take some time, so be patient.</p>
+        <br>
+   
+    <!-- Step 4 -->
+      <h2>Step 4: Go to Project Directory and Start Development Server</h2>
+      <p>After the command has been executed successfully, navigate to the my-app directory:</p>
+     <pre class="codeBlock">
+           <code class="language-js">
+    cd my-app
+            </code>
+       </pre>
+       <br />
+       <p>Finally, type</p>
+       <br>
+    <pre class="codeBlock">
+        <code class="language-js">
+    npm start
+            </code>
+        </pre>
+        <br>
+        <p>Upon successful execution of the command, your default web browser will open at http://localhost:3000/:</p>
+        <br>
+     <img src="images/react-on-windows.png" class="image">
+     <p>And that's it! React is now installed and ready to use on your macOS.</p>
+     <br />
+
+<!-- information source: https://kinsta.com/knowledgebase/install-react/#step-1-install-nodejs-and-npm -->
+    
+      <hr />
+      <a href="index.html" class="prev">< Home </a>
+      <a href="repositories.html" class="next"> Next ></a>
+      <hr />
+    </div>
+  </body>
+  <script src="js/script.js"></script>
+</html>
