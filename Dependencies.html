@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dependencies in React.js</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/prismjs-okaidia-theme@0.0.1/prism-okaidia.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="header">
+        <p class="siteTitle">
+            <a href="index.html">React Guide</a>
+        </p>
+        <div class="nav">
+            <div class="dropdownActive">
+                <a href="set-up.html">Hooks and LifeCycle</a>
+            </div>
+            <ul class="dropdown">
+                <a href="repositories.html">1</a>
+                <a href="operations.html">2</a>
+                <a href="branching.html">3</a>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Dependencies in React.js</h1>
+        <hr />
+        <h2>Dependencies Management</h2>
+        <h3>What are Dependencies in React.js?</h3>
+        <p>
+            Dependencies in React.js refer to external libraries or modules that your React application relies on for
+            various functionalities.
+            These dependencies can include libraries for state management, routing, styling, data fetching, and more.
+            Managing dependencies effectively is crucial for building robust and efficient React applications.
+        </p>
+        <p>
+            In React development, tools like npm (Node Package Manager) or yarn are commonly used to install, manage, and
+            update dependencies.
+            By specifying dependencies in the <code>package.json</code> file and running package managers, developers can
+            easily install and
+            integrate external libraries into their projects.
+        </p>
+        <p>
+            Understanding the dependencies your project relies on, their versions, and their compatibility with each other
+            is essential to avoid
+            conflicts and ensure smooth development and deployment processes.
+        </p>
+        <br />
+
+        <h3>Common Dependencies in React.js</h3>
+        <p>
+            React.js ecosystem offers a wide range of dependencies to enhance development productivity and enable the
+            creation of complex
+            applications. Some common dependencies used in React.js development include:
+        </p>
+        <ul>
+            <li><strong>React Router:</strong> A popular library for handling routing in React applications, enabling
+                navigation between
+                different views or components.</li>
+            <li><strong>Redux:</strong> A predictable state container for managing application state in large-scale React
+                applications.</li>
+            <li><strong>Axios:</strong> A promise-based HTTP client for making asynchronous HTTP requests in the browser,
+                widely used for data
+                fetching.</li>
+            <li><strong>Styled-components:</strong> A CSS-in-JS library for styling React components with scoped styles and
+                dynamic styling
+                capabilities.</li>
+            <li><strong>React Query:</strong> A powerful library for managing server-state and caching in React
+                applications, particularly useful
+                for data fetching and synchronization.</li>
+        </ul>
+        <br />
+
+        <h3>Installing Dependencies</h3>
+        <p>
+            To install dependencies in a React.js project, you can use npm or yarn commands in the terminal. For example, to
+            install React Router,
+            you can run:
+        </p>
+        <pre class="codeBlock">
+            <code class="language-bash">
+                npm install react-router-dom
+            </code>
+        </pre>
+        <p>
+            This command installs the React Router package and its dependencies, adding them to the
+            <code>node_modules</code> directory and
+            updating the <code>package.json</code> file with the new dependency.
+        </p>
+        <p>
+            Once installed, you can import and use the installed dependencies in your React components to leverage their
+            functionality and
+            features.
+        </p>
+        <br />
+
+        <h3>Conclusion</h3>
+        <p>
+            Managing dependencies effectively is essential for building scalable, maintainable, and feature-rich React
+            applications.
+            Understanding the purpose and usage of various dependencies and staying updated with the latest developments in
+            the React ecosystem
+            can greatly enhance your development workflow and contribute to the success of your projects.
+        </p>
+    </div>
+
+
+    <hr />
+    <a href="index.html" class="prev">&lt; Home</a>
+    <a href="repositories.html" class="next">Next &gt;</a>
+    <hr />
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
