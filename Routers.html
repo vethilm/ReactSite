@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction to React</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src=" https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js "></script>
+    <link
+      href=" https://cdn.jsdelivr.net/npm/prismjs-okaidia-theme@0.0.1/prism-okaidia.min.css "
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <p class="siteTitle">
+        <a href="index.html">React Guide</a>
+      </p>
+      <div class="nav">
+        <ul class="dropdown">
+          <a href="Intro.html">Introduction to React</a>
+          <a href="Setup.html">Set Up</a>
+          <a href="Dependencies.html">Dependencies</a>
+          <a href="Components.html">Components</a>
+          <a href="Hooks.html">Hooks and Lifecycle</a>
+          <a class="active" href="Routers.html">React Router</a>
+          <a href="BestPractices.html">Best Practices</a>
+          <a href="Resources.html">More Resources</a>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content">
+      <h1>React Router</h1>
+      <hr />
+      <p>
+        The react router enables the creation of multipage apps wothout
+        refreshing the page. It also allows teh use of browser hisory fuctions
+        like using the backbtton, open in new tab, sharing pages, etc that
+        aren't availiable without it
+      </p>
+
+      <h2>Usage</h2>
+      <h3>Set up</h3>
+      <p>
+        Add the roeact router to your project by running
+        <span class="code">npm install react-router-dom@latest</span> in the
+        root directory.
+      </p>
+      <h3>Browser Router</h3>
+      <p>
+        To use the router in an app, import BrowserRouter, Routes, and Route as
+        well as all of the accessable pages to your app jsx file.
+      </p>
+      <pre class="codeBlock"><code class="language-js"> 
+            import React from "react";
+            import { BrowserRouter, Routes, Route } from "react-router-dom";
+            import PageOne from "./PageOne";
+            import PageTwo from "./PageTwo";
+            import PageThree from "./PageThree";
+        </code></pre>
+      <p>
+        In the apps return statement, use the
+        <span class="code">&lt;BrowserRouter&gt;</span> to wrap the routes, or
+        pages, in the app. Each route contains properties for the path and
+        element. The path defines the URL of the page while the element
+        propertie defines the componentto be diplayed in the browser.
+      </p>
+      <pre class="codeBlock">
+        <code class="language-js">
+            function App() {
+                return (
+                  &lt;BrowserRouter&gt;
+                    &lt;Nav /&gt;
+                    &lt;Routes&gt;
+                      &lt;Route path=&quot;/&quot; element={&lt;PageOne /&gt;} /&gt;
+                      &lt;Route path=&quot;/two&quot; element={&lt;PageTwo /&gt;} /&gt;
+                      &lt;Route path=&quot;/three&quot; element={&lt;PageThree /&gt;} /&gt;
+                    &lt;/Routes&gt;
+                  &lt;/BrowserRouter&gt;
+                );
+              }
+</code>
+</pre>
+      <h3>Link</h3>
+      <p>
+        For the individual components, import Link from react-router-dom. This
+        is used to create links with in the page that can be accessed by the
+        router. The "to" property in the Link component provides the router with
+        the path it will link to . In the example below, the links direct to
+        "/two" and "/three" which access the matching path from the Route and
+        display the associated element
+      </p>
+      <pre class="codeBlock">
+        <code class="language-js">
+    import React from &quot;react&quot;;
+    import { Link } from &quot;react-router-dom&quot;;
+
+    function PageOne() {
+    return (
+        &lt;div&gt;
+        &lt;h1&gt;page #1&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;Link to=&quot;/two&quot;&gt;go to page 2 &lt;/Link&gt;
+            &lt;br /&gt;
+            &lt;Link to=&quot;/three&quot;&gt;go to page 3&lt;/Link&gt;
+        &lt;/nav&gt;
+        &lt;/div&gt;
+    );
+    }
+    export default PageOne;
+</code>
+</pre>
+      <hr />
+      <a href="Hooks.html" class="prev">< Back </a>
+      <a href="BestPractices.html" class="next"> Next ></a>
+      <hr />
+    </div>
+  </body>
+</html>
