@@ -1,80 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Components in React.js</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
 
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/prismjs-okaidia-theme@0.0.1/prism-okaidia.min.css" rel="stylesheet" />
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/prismjs-okaidia-theme@0.0.1/prism-okaidia.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="header">
-        <p class="siteTitle">
-            <a href="index.html">React Guide</a>
-        </p>
-        <div class="nav">
-            <div class="dropdownActive">
-                <a href="set-up.html">Hooks and LifeCycle</a>
-            </div>
-            <ul class="dropdown">
-                <a href="repositories.html">1</a>
-                <a href="operations.html">2</a>
-                <a href="branching.html">3</a>
-            </ul>
-        </div>
+      <p class="siteTitle">
+        <a href="index.html">React Guide</a>
+      </p>
+      <div class="nav">
+        <ul class="dropdown">
+          <a href="Intro.html">Introduction to React</a>
+          <a href="Setup.html">Set Up</a>
+          <a href="Dependencies.html">Dependencies</a>
+          <a class="active" href="Components.html">Components</a>
+          <a href="Hooks.html">Hooks and Lifecycle</a>
+          <a href="Routers.html">React Router</a>
+          <a href="BestPractices.html">Best Practices</a>
+          <a href="Resources.html">More Resources</a>
+        </ul>
+      </div>
     </div>
 
     <div class="content">
-        <h1>Components in React.js</h1>
-        <hr />
-        <h2>Introduction to Components</h2>
-        <h3>What are Components in React.js?</h3>
-        <p>
-            Components are the building blocks of React.js applications. They are reusable and independent pieces of code
-            that encapsulate
-            specific functionalities or UI elements.
-        </p>
-        <p>
-            In React, components can be classified into two main types: functional components and class components.
-            Functional components are
-            simple JavaScript functions that take props (properties) as input and return JSX (JavaScript XML) to describe
-            the UI. Class
-            components are JavaScript classes that extend React.Component and have their own state and lifecycle methods.
-        </p>
-        <p>
-            Components enable developers to break down the user interface into smaller, manageable parts, making code
-            organization, debugging,
-            and maintenance easier. They also promote reusability, as components can be reused across different parts of the
-            application or
-            even in different projects.
-        </p>
-        <br />
-    
-        <h3>Creating and Using Components</h3>
-        <p>
-            In React.js, creating and using components is straightforward. Functional components can be defined as arrow
-            functions or regular
-            functions that return JSX. Class components are defined as JavaScript classes that extend React.Component and
-            implement a render
-            method to return JSX.
-        </p>
-        <p>
-            Once defined, components can be used within other components or in the main application JSX by simply invoking
-            them as if they were
-            HTML tags.
-        </p>
-        <p>
-            Here's an example of a simple functional component named <code>Button</code>:
-        </p>
-        <pre class="codeBlock">
+      <h1>Components in React.js</h1>
+      <hr />
+      <h2>Introduction to Components</h2>
+      <h3>What are Components in React.js?</h3>
+      <p>
+        Components are the building blocks of React.js applications. They are
+        reusable and independent pieces of code that encapsulate specific
+        functionalities or UI elements.
+      </p>
+      <p>
+        In React, components can be classified into two main types: functional
+        components and class components. Functional components are simple
+        JavaScript functions that take props (properties) as input and return
+        JSX (JavaScript XML) to describe the UI. Class components are JavaScript
+        classes that extend React.Component and have their own state and
+        lifecycle methods.
+      </p>
+      <p>
+        Components enable developers to break down the user interface into
+        smaller, manageable parts, making code organization, debugging, and
+        maintenance easier. They also promote reusability, as components can be
+        reused across different parts of the application or even in different
+        projects.
+      </p>
+      <br />
+
+      <h3>Creating and Using Components</h3>
+      <p>
+        In React.js, creating and using components is straightforward.
+        Functional components can be defined as arrow functions or regular
+        functions that return JSX. Class components are defined as JavaScript
+        classes that extend React.Component and implement a render method to
+        return JSX.
+      </p>
+      <p>
+        Once defined, components can be used within other components or in the
+        main application JSX by simply invoking them as if they were HTML tags.
+      </p>
+      <p>
+        Here's an example of a simple functional component named
+        <code>Button</code>:
+      </p>
+      <pre class="codeBlock">
             <code class="language-js">
                 import React from 'react';
     
@@ -87,42 +98,38 @@
                 export default Button;
             </code>
         </pre>
-        <p>
-            This component takes a prop named <code>text</code> and renders a button with the provided text.
-        </p>
-        <br />
-    
-        <h3>Component Composition</h3>
-        <p>
-            Component composition is a powerful concept in React.js that allows developers to combine multiple components to
-            create complex UI
-            structures. Components can be nested within each other, allowing for a hierarchical organization of the user
-            interface.
-        </p>
-        <p>
-            By breaking down the UI into smaller, reusable components and composing them together, developers can build
-            scalable and
-            maintainable applications with ease.
-        </p>
-        <br />
-    
-        <h3>Conclusion</h3>
-        <p>
-            Components are the heart of React.js development, enabling developers to build dynamic and interactive user
-            interfaces. By
-            understanding the principles of component-based architecture and mastering the creation and composition of
-            components, developers
-            can create powerful and flexible applications that meet the needs of users and stakeholders.
-        </p>
+      <p>
+        This component takes a prop named <code>text</code> and renders a button
+        with the provided text.
+      </p>
+      <br />
+
+      <h3>Component Composition</h3>
+      <p>
+        Component composition is a powerful concept in React.js that allows
+        developers to combine multiple components to create complex UI
+        structures. Components can be nested within each other, allowing for a
+        hierarchical organization of the user interface.
+      </p>
+      <p>
+        By breaking down the UI into smaller, reusable components and composing
+        them together, developers can build scalable and maintainable
+        applications with ease.
+      </p>
+      <br />
+
+      <h3>Conclusion</h3>
+      <p>
+        Components are the heart of React.js development, enabling developers to
+        build dynamic and interactive user interfaces. By understanding the
+        principles of component-based architecture and mastering the creation
+        and composition of components, developers can create powerful and
+        flexible applications that meet the needs of users and stakeholders.
+      </p>
+      <hr />
+      <a href="Dependencies.html" class="prev">&lt; Back</a>
+      <a href="Hooks.html" class="next">Next &gt;</a>
+      <hr />
     </div>
-
-
-    <hr />
-    <a href="index.html" class="prev">&lt; Home</a>
-    <a href="repositories.html" class="next">Next &gt;</a>
-    <hr />
-
-    <script src="js/script.js"></script>
-</body>
-
+  </body>
 </html>

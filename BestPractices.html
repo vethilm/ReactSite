@@ -28,13 +28,15 @@
         <a href="index.html">React Guide</a>
       </p>
       <div class="nav">
-        <div class="dropdownActive">
-          <a href="set-up.html">Best Practices for React Development</a>
-        </div>
         <ul class="dropdown">
-          <a href="repositories.html">1</a>
-          <a href="operations.html">2</a>
-          <a href="branching.html">3</a>
+          <a href="Intro.html">Introduction to React</a>
+          <a href="Setup.html">Set Up</a>
+          <a href="Dependencies.html">Dependencies</a>
+          <a href="Components.html">Components</a>
+          <a href="Hooks.html">Hooks and Lifecycle</a>
+          <a href="Routers.html">React Router</a>
+          <a class="active" href="BestPractices.html">Best Practices</a>
+          <a href="Resources.html">More Resources</a>
         </ul>
       </div>
     </div>
@@ -44,115 +46,141 @@
       <hr />
       <h2>Best Practices</h2>
       <p>
-        Best practices for React development can significantly enhance the maintainability, performance,
-         and overall quality of your applications. 
+        Best practices for React development can significantly enhance the
+        maintainability, performance, and overall quality of your applications.
       </p>
-      
+
       <br />
       <h3>1. Component Structure and Organization:</h3>
       <ul>
-        <li><p>
-            • Single Responsibility: Keep components focused on a single responsibility or functionality to enhance
-             reusability and maintainability.
-        </p></li>
-     
-        <li><p>
-            • Container and Presentational Components: Use a separation of container components (handling logic, 
-            state, and data fetching) and presentational components (focused on rendering UI) to promote a clean
-             and organized codebase.
-        </p></li>
-        <img class="image" src="images/component-structure.jpeg" alt="">
-        </ul>
+        <li>
+          <p>
+            • Single Responsibility: Keep components focused on a single
+            responsibility or functionality to enhance reusability and
+            maintainability.
+          </p>
+        </li>
 
-        <h3>2. State Management:</h3>
-        <ul>
-          <li><p>
-            • Use State Wisely: Lift state up to the nearest common ancestor for shared data and use local component
-             state for component-specific data.
-          </p></li>
-          <li><p>
-            • Avoid Excessive Use of State: If a piece of data doesn't affect the UI or isn't needed for rendering
-             consider avoiding state and manage it at a higher level.
-          </p></li>
-          <img class="image" src="images/State-Management.webp" alt="">
-          </ul>
+        <li>
+          <p>
+            • Container and Presentational Components: Use a separation of
+            container components (handling logic, state, and data fetching) and
+            presentational components (focused on rendering UI) to promote a
+            clean and organized codebase.
+          </p>
+        </li>
+        <img class="image" src="images/component-structure.jpeg" alt="" />
+      </ul>
 
-          <h3>3. Code Splitting:</h3>
-          <ul>
-            <li><p>
-              • Dynamic Imports: Use dynamic imports and React's lazy loading for code splitting, allowing you to
-               load only the necessary components when needed, improving initial load times.
-            </p></li>
-            <img class="image" src="images/code-splitting.png" alt="">
-            </ul>
+      <h3>2. State Management:</h3>
+      <ul>
+        <li>
+          <p>
+            • Use State Wisely: Lift state up to the nearest common ancestor for
+            shared data and use local component state for component-specific
+            data.
+          </p>
+        </li>
+        <li>
+          <p>
+            • Avoid Excessive Use of State: If a piece of data doesn't affect
+            the UI or isn't needed for rendering consider avoiding state and
+            manage it at a higher level.
+          </p>
+        </li>
+        <img class="image" src="images/State-Management.webp" alt="" />
+      </ul>
 
-            <h3>4. CSS-in-JS and Styling:</h3>
-        <ul>
-          <li><p>
-            • Scoped Styles: Use CSS-in-JS libraries or CSS modules to scope styles to components, avoiding
-             global style conflicts.
-          </p></li>
-          <li><p>
-            •Avoid Inline Styles: Minimize the use of inline styles for better maintainability and separation
-             of concerns
-          </p></li>
-          <img class="image" src="images/styling.webp" alt="">
-          </ul>
+      <h3>3. Code Splitting:</h3>
+      <ul>
+        <li>
+          <p>
+            • Dynamic Imports: Use dynamic imports and React's lazy loading for
+            code splitting, allowing you to load only the necessary components
+            when needed, improving initial load times.
+          </p>
+        </li>
+        <img class="image" src="images/code-splitting.png" alt="" />
+      </ul>
 
-          <h3>5. Testing:</h3>
-        <ul>
-          <li><p>
-            • Unit Testing: Write unit tests for components using testing libraries like Jest and React
-             Testing Library.
-          </p></li>
-          <li><p>
-            • Integration Testing: Perform integration tests to ensure the proper collaboration between
-             components.
-          </p></li>
-          <img class="image" src="images/testing.avif" alt="">
-          </ul>
+      <h3>4. CSS-in-JS and Styling:</h3>
+      <ul>
+        <li>
+          <p>
+            • Scoped Styles: Use CSS-in-JS libraries or CSS modules to scope
+            styles to components, avoiding global style conflicts.
+          </p>
+        </li>
+        <li>
+          <p>
+            •Avoid Inline Styles: Minimize the use of inline styles for better
+            maintainability and separation of concerns
+          </p>
+        </li>
+        <img class="image" src="images/styling.webp" alt="" />
+      </ul>
 
-          <h3>6. Accessibility:</h3>
-          <ul>
-            <li><p>
-                • Semantic HTML: Use semantic HTML elements for better accessibility and search engine 
-                optimization.
-            </p></li>
-            <li><p>
-                • ARIA Roles: Implement ARIA roles and attributes to enhance the accessibility of your
-                 components.
-            </p></li>
-            <img class="image" src="images/accesibility.webp" alt="">
-            </ul>
+      <h3>5. Testing:</h3>
+      <ul>
+        <li>
+          <p>
+            • Unit Testing: Write unit tests for components using testing
+            libraries like Jest and React Testing Library.
+          </p>
+        </li>
+        <li>
+          <p>
+            • Integration Testing: Perform integration tests to ensure the
+            proper collaboration between components.
+          </p>
+        </li>
+        <img class="image" src="images/testing.avif" alt="" />
+      </ul>
 
-            <h3>7. Documentation:</h3>
-            <ul>
-              <li><p>
-                • Document Code: Use comments and documentation to explain complex logic or components.
-              </p></li>
-              <li><p>
-                  • Storybook: Consider using tools like Storybook to build and document UI components
-                   in isolation.
-              </p></li>
-              <img class="image" src="images/storybook.gif" alt="">
-              </ul>
-  
+      <h3>6. Accessibility:</h3>
+      <ul>
+        <li>
+          <p>
+            • Semantic HTML: Use semantic HTML elements for better accessibility
+            and search engine optimization.
+          </p>
+        </li>
+        <li>
+          <p>
+            • ARIA Roles: Implement ARIA roles and attributes to enhance the
+            accessibility of your components.
+          </p>
+        </li>
+        <img class="image" src="images/accesibility.webp" alt="" />
+      </ul>
 
-
+      <h3>7. Documentation:</h3>
+      <ul>
+        <li>
+          <p>
+            • Document Code: Use comments and documentation to explain complex
+            logic or components.
+          </p>
+        </li>
+        <li>
+          <p>
+            • Storybook: Consider using tools like Storybook to build and
+            document UI components in isolation.
+          </p>
+        </li>
+        <img class="image" src="images/storybook.gif" alt="" />
+      </ul>
 
       <h3>Overview</h3>
       <p>
-        By adhering to these best practices, you can create more maintainable, performant, 
-        and scalable React applications. 
+        By adhering to these best practices, you can create more maintainable,
+        performant, and scalable React applications.
       </p>
 
-     
-
       <hr />
-      <a href="index.html" class="prev">< Home </a>
-      <a href="repositories.html" class="next"> Next ></a>
+      <a href="Routers.html" class="prev">< Prev </a>
+      <a href="Resources.html" class="next"> Next ></a>
       <hr />
     </div>
   </body>
-  <script src="js/script.js"></script>
 </html>
